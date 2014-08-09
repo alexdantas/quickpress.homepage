@@ -1,0 +1,248 @@
+/!
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+  - Homepage for
+  -   ___        _      _    ____
+  -  / _ \ _   _(_) ___| | _|  _ \ _ __ ___  ___ ___
+  - | | | | | | | |/ __| |/ / |_) | '__/ _ \/ __/ __|
+  - | |_| | |_| | | (__|   <|  __/| | |  __/\__ \__ \
+  -  \__\_\\__,_|_|\___|_|\_\_|   |_|  \___||___/___/
+  -
+  - This is a production release of the site.
+  - If you want to check out the source code, go to
+  - https://github.com/alexdantas/quickpress.homepage
+  - Thanks for the interest!
+  -
+  - - - - - - - - - - - - - - - - - - - - - - - - -
+doctype 5
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
+    meta name="description" content="Manage your Wordpress site on the command-line"
+    meta name="author"      content="Alexandre Dantas"
+    meta name="keywords"    content="wordpress,commandline,terminal"
+
+    title Quickpress
+
+    link rel="shortcut icon" href="images/favicon.png"
+
+    link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css"
+    link rel="stylesheet" type="text/css" href="stylesheets/carousel.css"
+
+    / HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+    /[if IE]
+      script type='text/javascript' src='//html5shim.googlecode.com/svn/trunk/html5.js'
+      script src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'
+      script src='https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js'
+
+  body
+    / Navigation Bar
+    .navbar-wrapper
+      .container
+
+        .navbar.navbar-inverse.navbar-static-top role="navigation"
+          .container
+            .navbar-header
+              button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-collapse"
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+
+              a.navbar-brand href="#" quickpress
+            .navbar-collapse.collapse
+              ul.nav.navbar-nav
+                li
+                  a href="#download"
+                    span.glyphicon.glyphicon-download'
+                    | Download
+                li
+                  a href="https://github.com/alexdantas/quickpress/wiki"
+                    span.glyphicon.glyphicon-list-alt'
+                    | Wiki
+                li
+                  a href="http://alexdantas.net/stuff/posts/category/projects/quickpress/"
+                    span.glyphicon.glyphicon-bullhorn'
+                    | News
+                li
+                  a href="http://webchat.freenode.net/?channels=quickpress"
+                    span.glyphicon.glyphicon-comment'
+                    | IRC Channel (<em>#quickpress</em> on <em>Freenode</em>)
+
+              / GitHub buttons
+              .github-buttons.pull-right style="margin-top: 15px"
+                iframe id="watch" src="http://ghbtns.com/github-btn.html?user=alexdantas&repo=quickpress&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100" height="20"
+                iframe id="fork" src="http://ghbtns.com/github-btn.html?user=alexdantas&repo=quickpress&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"
+
+    / Carousel
+    div#myCarousel.carousel.slide data-ride="carousel"
+
+      .carousel-inner
+        .item.active
+          img src="images/background.png"
+
+          .container
+            .row
+              .col-md-6
+                .text-center
+                  img src="images/quickpress-logo-medium.png" width="250" height="275"
+
+                  .lead
+                    | Manage your Wordpress blog on the
+                    br
+                    | command line.
+
+              .col-md-2
+                / Empty space
+
+              .col-md-4
+                a.btn.btn-lg.btn-success.btn-block href="#download" role="button"
+                  span.glyphicon.glyphicon-download'
+                  | Download
+
+                a.btn.btn-lg.btn-primary.btn-block href="https://github.com/alexdantas/quickpress/wiki" role="button"
+                  span.glyphicon.glyphicon-book'
+                  | Documentation
+
+                a.btn.btn-lg.btn-warning.btn-block href="#in-action" role="button"
+                  span.glyphicon.glyphicon-flash'
+                  | See it in action
+
+                .carousel-description
+                  p
+                    strong
+                      | Quickpress allows you to create, delete and list your posts and pages on the command line.
+                  p
+                    strong
+                      | With two to three commands, you're all set for managing you Wordpress blog.
+
+    .container.marketing
+      .row
+        .col-md-4
+          img.img-rounded src="images/banner1.png" alt="Generic placeholder image"
+          markdown:
+            ## Post quickly
+            Write the post on your favorite text editor
+            and let quickpress take care of the rest.
+
+        .col-md-4
+          img.img-rounded src="images/banner2.png" alt="Generic placeholder image"
+          markdown:
+            ## Write the way you like
+            Quickpress supports several templating languages:
+            Markdown, Asciidoc, Textile, Haml, ERB and
+            [much more][t]!
+
+            [t]:https://github.com/alexdantas/quickpress/#supported-template-engines
+
+        .col-md-4
+          img.img-rounded src="images/banner3.png" alt="Generic placeholder image"
+          markdown:
+            ## Manage several sites at once.
+            Switch between Wordpress sites easily and post on
+            all of them.
+
+      hr.featurette-separator
+
+      .row.featurette
+        a name="features"
+
+        .col-md-6
+          img.featurette-image.img-responsive.img-thumbnail src="images/guide.png" alt="Generic placeholder image" width="400" height="300"
+
+          markdown:
+            ## Actions
+            With quickpress you'll be able to
+
+            * Create, Delete, Edit **posts** and **pages**.
+            * List and create **categories**.
+            * Check status on **comments** and **users**.
+            * See **settings** on the Wordpress site.
+
+            And more, with straightforward commands.
+
+        .col-md-6
+          h2.featurette-heading
+            ' features
+            span.text-muted you'll love
+            p.lead
+              | Quickpress is:
+          p
+            markdown:
+              * **Powerful**: With quickpress you can create, delete and list
+                your posts and pages. See **actions** on the left.
+              * **Easy-to-use**: [Two to three commands](https://github.com/alexdantas/quickpress/#getting-started) should
+                be everything you need to know about it.
+              * **Versatile**: It supports a wide range of templating languages.
+                *Markdown*, *Asciidoc*, *ERB* and [much more](https://github.com/alexdantas/quickpress/#supported-template-engines)!
+              * **Documented**: [The wiki][wiki]
+                has all the guides you'll ever need. Also, reference is only
+                a `qp help` away.
+              * **Unified**: Works on both *Wordpress.com* and
+                self-hosted *Wordpress.org* websites.
+              * **Safe**: Quickpress doesn't store your username/password anywhere.
+                It also supports three different forms of
+                  authentication - [choose your favorite](https://github.com/alexdantas/quickpress/wiki/guide#authenticating).
+              * **Free**: It is licensed under the GPLv3. It means that quickpress
+                will always be free <br />
+                ([both as in "free beer" and as in "freedom"](http://en.wikipedia.org/wiki/Gratis_versus_libre#.22Free_beer.22_vs_.22free_speech.22_distinction)).
+
+              [tilt]:https://github.com/rtomayko/tilt
+              [thor]:http://whatisthor.com/
+              [rubypress]:https://github.com/zachfeldman/rubypress
+              [wiki]:https://github.com/alexdantas/quickpress/wiki
+              [gem]:https://rubygems.org/gem/quickpress/
+
+      hr
+
+      .row.featurette
+        a name="download"
+
+        .col-md-6
+          h2.featurette-heading
+            ' download
+            span.text-muted and install
+            p.lead
+              | quickpress is available on RubyGems.
+          p
+            markdown:
+              The preferred method to install is with rubygems:
+
+                  $ gem install quickpress
+
+              If you want to install it yourself,
+              [grab the `.gem` file here](https://rubygems.org/gems/quickpress).
+
+        .col-md-6
+          .text-center
+            img.featurette-image.img-responsive.img-thumbnail src="images/gem.png" width="400" height="300"
+
+      hr
+
+      .featurette
+        a name="in-action"
+
+        h2.featurette-heading
+          ' quickpress in action
+          span.text-muted for the first time
+
+        p.lead
+          | Real-time example on your first post with quickpress.
+
+        .text-center
+          / iframe src="http://showterm.io/d88aff17cd1f0a3785bff" width="640" height="500"
+          iframe src="http://showterm.io/a6f6edbd6430d9d820654" width="640" height="560"
+          markdown:
+            Huge thanks to [showterm](http://showterm.io/).
+
+      / Footer
+      hr
+      footer
+        a.pull-right href="/lenny/"
+          | ( ͡° ͜ʖ ͡°)
+
+  script type="text/javascript" src="/javascripts/vendor/jquery-1.8.0.min.js"
+  script type="text/javascript" src="/javascripts/vendor/bootstrap.min.js"
+
